@@ -10,9 +10,8 @@ const withLayoutBasic = (Component: any) => {
         <Head>
           <title>Nestar</title>
         </Head>
-
         <Stack id="pc-wrap">
-          <Stack id={"top"}>
+          <Stack id="top">
             <Top />
           </Stack>
 
@@ -21,7 +20,7 @@ const withLayoutBasic = (Component: any) => {
             style={{
               backgroundImage: "url(/img/banner/properties.png)",
               backgroundSize: "cover",
-              boxShadow: "inset 10px 40px 150px 40px rgb(24, 22, 36)",
+              boxShadow: "inset 10px 40px 150px 40px rgb(24 22 36)",
             }}
           >
             <Stack className={"container"}>
@@ -33,7 +32,6 @@ const withLayoutBasic = (Component: any) => {
           <Stack id={"main"}>
             <Component {...props} />
           </Stack>
-
           <Stack id={"footer"}>
             <Footer />
           </Stack>
