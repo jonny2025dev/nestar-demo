@@ -886,7 +886,6 @@
             }
           }
         }
-
         .wrapper {
           margin-top: 83px;
           width: 100%;
@@ -921,18 +920,19 @@
             display: flex;
             flex-direction: row;
             .top-agents-swiper {
-              width: 99.7%;
-              height: 280px;
+              width: 100%;
+             height: auto;
               display: flex;
               flex-direction: row;
               .top-agents-slide {
-                width: auto;
+                width: 300px;
                 height: auto;
                 display: flex;
                 .top-agent-card {
                   width: 205px;
                   height: 280px;
                   display: flex;
+                  flex-shrink: 0;
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
@@ -942,7 +942,6 @@
                     border-radius: 50%;
                     cursor: pointer;
                   }
-
                   .agent-name {
                     margin-top: 10px;
                     strong {
@@ -957,7 +956,6 @@
                       cursor: pointer;
                     }
                   }
-
                   .agent-details {
                     font-size: 14px;
                     margin-top: 3px;

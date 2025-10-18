@@ -5,8 +5,8 @@ import EastIcon from "@mui/icons-material/East";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TopPropertyCard from "./TopPropertyCard";
 
-const TopProperties = ({ initialInput, ...props }: any) => {
-  const [topProperties, setTopProperties] = useState<number[]>(initialInput);
+const TopProperties = ({ initialInput = [1, 2, 3, 4, 5, 6, 7], ...props }: any) => {
+  const [topProperties] = useState<number[]>(initialInput);
 
   return (
     <Stack className={"top-properties"}>
@@ -24,35 +24,34 @@ const TopProperties = ({ initialInput, ...props }: any) => {
             </div>
           </Box>
         </Stack>
+
         <Stack className={"card-box"}>
-          <Swiper
-            className={"top-property-swiper"}
-            slidesPerView={"auto"}
-            spaceBetween={15}
-            navigation={{
-              nextEl: ".swiper-top-next",
-              prevEl: ".swiper-top-prev",
-            }}
-            pagination={{
-              el: ".swiper-top-pagination",
-            }}
-          >
-            {topProperties?.map((_property, index) => {
-              return (
+          {(!topProperties || topProperties.length === 0) ? (
+            <Box className={"empty-list"}>Top Property is Empty</Box>
+          ) : (
+            <Swiper
+              className={"top-property-swiper"}
+              slidesPerView={"auto"}
+              spaceBetween={15}
+              navigation={{
+                nextEl: ".swiper-top-next",
+                prevEl: ".swiper-top-prev",
+              }}
+              pagination={{
+                el: ".swiper-top-pagination",
+              }}
+            >
+              {topProperties.map((property, index) => (
                 <SwiperSlide className={"top-property-slide"} key={index}>
                   <TopPropertyCard />
                 </SwiperSlide>
-              );
-            })}
-          </Swiper>
+              ))}
+            </Swiper>
+          )}
         </Stack>
       </Stack>
     </Stack>
   );
-};
-
-TopProperties.defaultProps = {
-  initialInput: [1, 2, 3, 4, 5, 6, 7],
 };
 
 export default TopProperties;

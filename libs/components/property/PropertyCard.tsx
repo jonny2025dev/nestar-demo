@@ -50,7 +50,7 @@ const PropertyCard = () => {
           </Stack>
 
           <Stack className={"option"}>
-            <img src="/img/icons/roo.svg" alt="" />
+            <img src="/img/icons/room.svg" alt="" />
             <Typography>7 room </Typography>
           </Stack>
 
