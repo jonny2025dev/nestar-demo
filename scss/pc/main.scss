@@ -17,11 +17,10 @@
         box-sizing: border-box;
         z-index: 99;
         align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        border-top: 1px solid rgba(255, 255, 255, 0.7);
         &.transparent {
           background-color: #181a209e;
         }
-
         .container {
           flex-direction: row;
           align-items: center;
@@ -34,11 +33,10 @@
           }
           .router-box {
             position: relative;
-            width: 617px;
+            width: 617.778px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
             div {
               position: relative;
               color: #eeeeeeed;
@@ -61,7 +59,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              border-radius: 60px;
+              border-radius: 68px;
               border: 1px solid #ffffff;
               cursor: pointer;
               svg {
@@ -126,7 +124,7 @@
             align-items: center;
             justify-content: space-between;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.575);
+            background-color: rgba(255, 255, 255, 0.575);
             box-sizing: border-box;
             cursor: pointer;
             &.on {
@@ -319,7 +317,7 @@
             font-weight: 400;
             line-height: 26px;
             cursor: pointer;
-            &:hover {
+            &.hover {
               border-radius: 5px;
               border: 1px solid #b9b9b9;
               box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -329,6 +327,7 @@
       }
     }
   }
+
   .header-basic {
     position: relative;
     width: 100%;
@@ -342,6 +341,7 @@
     }
     .container {
       margin-top: 175px;
+
       strong {
         color: #fff;
         font-family: $font;
@@ -362,6 +362,7 @@
       }
     }
   }
+
   #footer {
     position: relative;
     padding: 60px 0px 18px 0px;
@@ -411,7 +412,6 @@
             .media-box {
               margin-top: 12px;
               color: #929495;
-
               svg {
                 font-size: 32px;
                 margin-right: 22px;
@@ -470,7 +470,7 @@
               }
             }
           }
-          .bottom {
+          .button {
             margin-top: 60px;
             display: flex;
             flex-direction: row;
@@ -496,7 +496,7 @@
                 font-style: normal;
                 font-weight: 400;
                 cursor: pointer;
-                &:hover {
+                &.hover {
                   color: #ffffff;
                   text-decoration-line: underline;
                 }
